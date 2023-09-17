@@ -1,7 +1,7 @@
 import { Box, Card, CardBody, Grid, Text, Breadcrumb, BreadcrumbItem, BreadcrumbLink } from '@chakra-ui/react'
 import React from 'react'
-import {BiChevronsRight} from "react-icons/bi";
-
+import { BiChevronsRight } from "react-icons/bi";
+import Chart from './LineChart';
 function Dashbaord() {
     return (
         <>
@@ -35,7 +35,25 @@ function Dashbaord() {
                         <Text fontSize={30}>2</Text>
                     </CardBody>
                 </Card>
+                <Card>
+                    <CardBody>
+                        <Text fontSize={20}>Appointments Today</Text>
+                        <Text fontSize={30}>45</Text>
+                    </CardBody>
+                </Card>
+                <Card>
+                    <CardBody>
+                        <Text fontSize={20}>Patients Today</Text>
+                        <Text fontSize={30}>2</Text>
+                    </CardBody>
+                </Card>
             </Grid>
+            <Card>
+            <Chart/>
+            </Card>
+                
+            
+
 
         </>
     )
