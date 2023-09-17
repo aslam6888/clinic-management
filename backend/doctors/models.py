@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 
 GENDER = (('male', 'Male'), ('female', 'Female'), ('others', 'Others'))
 
-class Docter(models.Model):
+class Doctor(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=False)
     gender = models.CharField(max_length=100, choices=GENDER)
     department = models.ForeignKey("Department", on_delete=models.SET_NULL, null=True)
